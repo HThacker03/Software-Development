@@ -1,12 +1,15 @@
 import java.util.Date;
-class Triangle extends GeometricObject{
+class Triangle extends GeometricObject implements Colorable{
+	
+	@Override
+	public void howToColor(){
+		System.out.print("Color all three sides.");
+	}
 	double side1 = 1.0;
 	double side2 = 1.0;
 	double side3 = 1.0;
-	
-	
-	
-	Triangle (){
+
+Triangle (){
 	}
 	Triangle (double side1, double side2, double side3) {
 		this.side1 = side1;
@@ -45,5 +48,3 @@ class Triangle extends GeometricObject{
 		return super.toString() + " Triangle: side1 = " + side1 + ", side2 = " + side2 + ", side3 = " + side3;
 	}
 }
-
-	
